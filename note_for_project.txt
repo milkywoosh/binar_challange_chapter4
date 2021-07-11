@@ -1,0 +1,15 @@
+BOOTRAP 5: reason, based on several information on the internet this has been a stable version
+
+
+figma design: 
+https://www.figma.com/file/njjynWhBsR33SA6YReviGS/ Binar-challenge-FW-C4?node-id=0%3A1
+
+reference: 
+
+- next:
+    -randomin background abu-abu tiap item saat click mulai
+    -tambahin proses refresh
+    -add WIN LOSE DRAW resul at center
+    -ketentuan pakai OOP paradigm
+    -ketentuan pakai bootstrap
+    -setelah selesai game suit tidak bisa di-click, atau ubah state "true" to "false"

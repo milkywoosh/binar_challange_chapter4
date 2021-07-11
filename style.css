@@ -1,0 +1,49 @@
+.stone {
+   
+    width: 128px;
+    height: 92px;
+    /* align-items: center; */
+    /* box-sizing: border-box; */
+
+  
+}
+
+.scissor {
+    width: 134px;
+    height: 160px;
+    
+    
+}
+
+.paper {
+    width: 115px;
+    height: 150px;
+}
+
+.border-between {
+    padding-top: 60px;
+}
+
+
+/* randoming */
+.bg-item-suit {
+    
+    width: 223px;
+    height: 204px;
+    /* if playing set background with  #C4C4C4*/
+    background: #C4C4C4;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+}
+.bg-item-center {
+    width: 223px;
+    height: 204px;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+}
+
+.left-space {
+    /* padding-left: 50px; */
+}
