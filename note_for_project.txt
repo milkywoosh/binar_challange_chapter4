@@ -13,3 +13,17 @@ reference:
     -ketentuan pakai OOP paradigm
     -ketentuan pakai bootstrap
     -setelah selesai game suit tidak bisa di-click, atau ubah state "true" to "false"
+
+
+bstrap 5:
+    centering object
+    - h-100 
+    - d-flex
+    - justify-content-center
+    - align-items-center
+
+
+copy lineof code: shift + option + down;
+
+
+referensi = https://gitlab.com/priambudi/test-git-binar/-/tree/master/

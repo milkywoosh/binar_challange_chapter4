@@ -2,17 +2,11 @@
    
     width: 128px;
     height: 92px;
-    /* align-items: center; */
-    /* box-sizing: border-box; */
-
-  
 }
 
 .scissor {
     width: 134px;
-    height: 160px;
-    
-    
+    height: 140px;
 }
 
 .paper {
@@ -21,24 +15,49 @@
 }
 
 .border-between {
-    padding-top: 60px;
+    padding-top: 20px;
 }
 
+.player-com {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    width: 192px;
+   
+    display: block;
+    text-align: center;
+    padding-bottom: 2px;
+
+    width: 192px;
+    display: block;
+  
+}
 
 /* randoming */
-.bg-item-suit {
+ .bg-item-suit {
     
-    width: 223px;
-    height: 204px;
+    width: 192px;
+    height: 149x;
     /* if playing set background with  #C4C4C4*/
-    background: #C4C4C4;
+    
     border-radius: 30px;
     display: block;
     text-align: center;
+} 
+
+.set-bg-grey {
+    background: #C4C4C4;
 }
+
 .bg-item-center {
-    width: 223px;
-    height: 204px;
+    width: 240.11px;
+    height: 149px;
     border-radius: 30px;
     display: block;
     text-align: center;
@@ -47,3 +66,68 @@
 .left-space {
     /* padding-left: 50px; */
 }
+
+.sub_title {
+    width: 600px; /* the bigger the font, the wider it needs */
+    height: 50px;
+    /* left: 218px;
+    top: 40px; */
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    /* line-height: 49px; */
+    text-align:left;
+   
+
+    color: #F9B23D;
+}
+
+.less_than {
+    font-family: Open Sans;
+    width: 600px; /* the bigger the font, the wider it needs */
+    /* height: 50px; */
+    /* letter-spacing: 0.1em; */
+    /* text-transform: uppercase; */
+    text-align:left;
+
+    color: #724C21;
+}
+
+.vs-frame {
+    width: 192px;
+    height: 149px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 144px;
+    line-height: 196px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #BD0000;
+    display: block;
+    text-align: center;
+}
+
+.winner {
+   
+    width: 250px;
+    height: 166.93px;
+
+    background: #4C9654;
+    border-radius: 10px;
+    transform: rotate(-28.87deg);
+    
+}
+
+.draw {
+    width: 250px;
+    height: 166.93px;
+    background: #035B0C;
+    transform: rotate(-28.87deg);
+    border-radius: 10px;
+}
+
