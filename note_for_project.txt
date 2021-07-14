@@ -27,3 +27,7 @@ copy lineof code: shift + option + down;
 
 
 referensi = https://gitlab.com/priambudi/test-git-binar/-/tree/master/
+
+
+-add classList 
+element.classList.add("mystyle");
