@@ -54,7 +54,7 @@
             <div  id="batu-player1" 
                   class="bg-item-suit  justify-content-evenly" 
                   style="padding-top: 30px;"
-                  onmouseover="getId(this);" onmouseout="getOutId(this);">
+                  onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
                 <!-- player -->
                 <img src="./assets/batu.png"   class="  stone" >
             </div>
@@ -62,7 +62,7 @@
                 <span> </span>
             </div>
             <div  id="batu-com" class="bg-item-suit  justify-content-evenly " style="padding-top: 30px;"
-            onmouseover="getId(this);" onmouseout="getOutId(this);">
+            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
                 <!-- com -->
                 <img src="./assets/batu.png" class="  stone" >
             </div>
@@ -70,7 +70,7 @@
 
         <div class="d-flex flex-row bd-highlight justify-content-evenly border-between left-space">
             <div id="gunting-player1" class="bg-item-suit  justify-content-evenly " style="padding-top: 15px; padding-bottom: 20px;"
-            onmouseover="getId(this);" onmouseout="getOutId(this);">
+            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
                 <!-- player -->
                 <img src="./assets/gunting.png" class="  scissor   " >
             </div>
@@ -80,7 +80,7 @@
                 <!-- PLAYER 1, COM , VS   -->
             </div>
             <div id="gunting-com" class="bg-item-suit  justify-content-evenly" style="padding-top: 15px; padding-bottom: 20px;"
-            onmouseover="getId(this);" onmouseout="getOutId(this);">
+            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
                 <!-- com -->
                 <img src="./assets/gunting.png" class="  scissor " >
             </div>
@@ -88,7 +88,7 @@
 
         <div class="d-flex flex-row bd-highlight justify-content-evenly border-between left-space">
             <div id="kertas-player1" class="bg-item-suit  justify-content-evenly buttonElement" style="padding-top: 15px;padding-bottom: 20px;"
-            onmouseover="getId(this);" onmouseout="getOutId(this);">
+            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
                 <!-- player -->
                 <img src="./assets/kertas.png" class="  paper " >
             </div>
@@ -96,7 +96,7 @@
                 <span>  </span>
             </div>
             <div  id="kertas-com" class="bg-item-suit  justify-content-evenly" style="padding-top: 15px;padding-bottom: 20px;"
-            onmouseover="getId(this);" onmouseout="getOutId(this);">
+            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
                 <!-- com -->
                 <img src="./assets/kertas.png" class="  paper " >
             </div>
@@ -106,7 +106,8 @@
 
 
 
-    <script src="./engineJs.js" async></script>
+    <script src="./hoveringElement.js" async></script>
+    <script type= "module" src="./engineJs.js" ></script>
 </body>
 
 </html>

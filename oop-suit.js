@@ -1,5 +1,8 @@
-class Suit {
+// const Suit = require("./oop-suit");
 
+// input (gunting, kertas, batu);
+
+export default class Suitclass {
     suit(inputUser) {
         let pool = ["gunting", "batu", "kertas"];
         let rand = Math.floor(Math.random() * pool.length);
@@ -28,12 +31,7 @@ class Suit {
             } else if (pool[rand] == "batu") {
                 result = "menang"
             }
-        } else {
-            result = "INPUT YANG ANDA MASUKAN SALAH"
         }
-         result;
+        return result;
     }
 }
-
-module.exports = Suit;
-

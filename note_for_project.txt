@@ -31,3 +31,16 @@ referensi = https://gitlab.com/priambudi/test-git-binar/-/tree/master/
 
 -add classList 
 element.classList.add("mystyle");
+
+
+problem EXPORT MODULE: https://kotakode.com/pertanyaan/9851/SyntaxError%3A-Cannot-use-import-statement-outside-a-module
+
+
+
+last update: 15 juli:
+    - process on creating active grey background after addEventListener("click");
+    - import - export class and function with  ES6 style, module among file in directory
+
+    NEXT TODO: - Set Winner-Lose-Draw result on screen!
+               - set refresh page and SET "VS" state on the center
+               -

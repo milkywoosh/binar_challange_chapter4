@@ -1,57 +1,34 @@
+import {default as Suitclass} from "./oop-suit.js";
+
+
 // const Suit = require("./oop-suit");
 
 // input (gunting, kertas, batu);
 
-class SuitClass {
+const suitan = new Suitclass();
 
 
-    suit(inputUser) {
-        let pool = ["gunting", "batu", "kertas"];
-        let rand = Math.floor(Math.random() * pool.length);
-        let result;
-        if (inputUser == "gunting") {
-            if (pool[rand] == inputUser) {
-                result = "seri";
-            } else if (pool[rand] == "kertas") {
-                result = "menang"
-            } else if (pool[rand] == "batu") {
-                result = "kalah"
-            }
-        } else if (inputUser == "batu") {
-            if (pool[rand] == inputUser) {
-                result = "seri";
-            } else if (pool[rand] == "kertas") {
-                result = "kalah"
-            } else if (pool[rand] == "gunting") {
-                result = "menang"
-            }
-        } else if (inputUser == "kertas") {
-            if (pool[rand] == inputUser) {
-                result = "seri";
-            } else if (pool[rand] == "gunting") {
-                result = "kalah"
-            } else if (pool[rand] == "batu") {
-                result = "menang"
-            }
-        }
-        return result;
-    }
-}
+const batuP1 = document.getElementById("batu-player1");
+const guntingP1 = document.getElementById("gunting-player1");
+const kertasP1 = document.getElementById("kertas-player1");
 
-// class Suit
-let suit = new SuitClass();
+// if pool[rand] == "kertas"  set .set-bg-grey to class kertas-com
 
-
-/* ON OFF hovering element
-    onmouseover = "getId(this)"
-    onmouseout = "getOutId(this)"
-*/
-function getId (obj) {
-    document.getElementById(obj.id).classList.add("set-bg-grey")
-}
-function getOutId(obj) {
-    setTimeout( () => {
-        document.getElementById(obj.id).classList.remove("set-bg-grey")
-     }, 500 );
-   
-}
+batuP1.addEventListener("click", () => {
+    let inputan = suitan.suit("batu");
+    console.log(inputan);
+   if ( inputan === "seri") {
+       document.getElementById("batu-com").classList.remove("set-bg-grey");
+       document.getElementById("batu-com").classList.add("set-bg-grey");
+       setTimeout(() => {
+        document.getElementById("batu-com").classList.remove("set-bg-grey");
+       }, 500)
+   } else if (inputan === "gunting") {
+       document.getElementById("gunting-com").classList.add("set-bg-grey");
+   } else if (inputan === "kertas")  {
+    document.getElementById("kertas-com").classList.add("set-bg-grey");
+   }
+});
+// guntingP1
+// kertasP1
+// alert(suitan.suit("batu"));
