@@ -75,10 +75,17 @@
                 <img src="./assets/gunting.png" class="  scissor   " >
             </div>
 
+
+
+
             <!-- RANDOMIZE THIS PART TO DETERMINE THE RESULT OF THE GAME : PLAYER1 WIN , COM WIN, DRAW -->
-            <div class="draw justify-content-evenly">
+            <div class=" justify-content-evenly">
                 <!-- PLAYER 1, COM , VS   -->
+                <div id="board-result" class= " vs-frame" style="width: 230;">
+                    vs
+                </div>
             </div>
+
             <div id="gunting-com" class="bg-item-suit  justify-content-evenly" style="padding-top: 15px; padding-bottom: 20px;"
             onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
                 <!-- com -->
@@ -92,9 +99,11 @@
                 <!-- player -->
                 <img src="./assets/kertas.png" class="  paper " >
             </div>
-            <div class="bg-item-center justify-content-evenly">
-                <span>  </span>
+
+            <div id="refresh-game" class="bg-button-refresh justify-content-evenly">
+                <img src="./assets/refresh.png" class=" refresh-button" >
             </div>
+
             <div  id="kertas-com" class="bg-item-suit  justify-content-evenly" style="padding-top: 15px;padding-bottom: 20px;"
             onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
                 <!-- com -->

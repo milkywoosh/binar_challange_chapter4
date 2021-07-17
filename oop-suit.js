@@ -1,4 +1,3 @@
-// const Suit = require("./oop-suit");
 
 // input (gunting, kertas, batu);
 

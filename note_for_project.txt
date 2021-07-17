@@ -44,3 +44,8 @@ last update: 15 juli:
     NEXT TODO: - Set Winner-Lose-Draw result on screen!
                - set refresh page and SET "VS" state on the center
                -
+
+
+
+agar CLASS dapat berada barengan dan DOCUMENT.GETLEMENTBYID()
+dan WEB dapat di-load dengan baik, PERLU PAKAI LIVE-SERVER

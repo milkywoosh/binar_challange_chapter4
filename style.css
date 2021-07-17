@@ -1,5 +1,5 @@
 .stone {
-   
+    
     width: 128px;
     height: 92px;
 }
@@ -12,6 +12,11 @@
 .paper {
     width: 115px;
     height: 150px;
+}
+
+.refresh-button {
+    width: 77px;
+    height: 71px;
 }
 
 .border-between {
@@ -63,6 +68,14 @@
     text-align: center;
 }
 
+.bg-button-refresh {
+    width: 270.11px;
+    height: 149px;
+    text-align: center;
+    padding-top: 150px;
+}
+}
+
 .left-space {
     /* padding-left: 50px; */
 }
@@ -95,10 +108,10 @@
     color: #724C21;
 }
 
+/* state before click which show VS typing */
 .vs-frame {
-    width: 192px;
+    width: 240.11px;
     height: 149px;
-
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
@@ -106,28 +119,43 @@
     line-height: 196px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-
     color: #BD0000;
     display: block;
     text-align: center;
 }
 
-.winner {
-   
+/* state after click which show P1 or COM win */
+.not_draw_result {
     width: 250px;
     height: 166.93px;
-
     background: #4C9654;
-    border-radius: 10px;
     transform: rotate(-28.87deg);
-    
+    border-radius: 10px;
+
+
 }
 
-.draw {
+/* state after click which show DRAW result */
+.draw_result {
     width: 250px;
     height: 166.93px;
     background: #035B0C;
     transform: rotate(-28.87deg);
     border-radius: 10px;
 }
+.text_result {
+
+    padding-top: 40px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transform: rotate(-30.98deg);
+}
+
 
