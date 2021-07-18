@@ -13,7 +13,7 @@
     <!-- CSS file style -->
     <link href="style.css" rel="stylesheet">
     <title>Hello, world!</title>
-    
+    <script type= "module" src="./engineJs.js" ></script>
    
 </head>
 
@@ -54,7 +54,8 @@
             <div  id="batu-player1" 
                   class="bg-item-suit  justify-content-evenly" 
                   style="padding-top: 30px;"
-                  onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
+                  >
+                  <!-- onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);" -->
                 <!-- player -->
                 <img src="./assets/picSVG/batu 1.svg"   class="stone" >
 
@@ -66,7 +67,7 @@
                 <span> </span>
             </div>
             <div  id="batu-com" class="bg-item-suit  justify-content-evenly " style="padding-top: 30px;"
-            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
+            >
                 <!-- com -->
                 <img src="./assets/picSVG/batu 1.svg" class="  stone" > 
             </div>
@@ -74,7 +75,7 @@
 
         <div class="d-flex flex-row bd-highlight justify-content-evenly border-between left-space">
             <div id="gunting-player1" class="bg-item-suit  justify-content-evenly " style="padding-top: 15px; padding-bottom: 20px;"
-            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
+            >
                 <!-- player -->
                 <img src="./assets/gunting.png" class="scissor   " >
             </div>
@@ -90,8 +91,8 @@
                 </div>
             </div>
 
-            <div id="gunting-com" class="bg-item-suit  justify-content-evenly" style="padding-top:; padding-bottom: ;"
-            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
+            <div id="gunting-com" class="bg-item-suit  justify-content-evenly" style="padding-top: 15px;padding-bottom: 20px;"
+            >
                 <!-- com -->
                 <img src="./assets/gunting.png" class="  scissor " >
             </div>
@@ -99,17 +100,17 @@
 
         <div class="d-flex flex-row bd-highlight justify-content-evenly border-between left-space">
             <div id="kertas-player1" class="bg-item-suit  justify-content-evenly buttonElement" style="padding-top: 15px;padding-bottom: 20px;"
-            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
+            >
                 <!-- player -->
                 <img src="./assets/kertas.png" class="  paper " >
             </div>
 
             <div id="refresh-game" class="bg-button-refresh justify-content-evenly">
-                <img id="rotatingRefreshButton" src="./assets/picSVG/refresh 2.svg" class=" refresh-button   linear" >
+                <img id="rotatingRefreshButton" src="./assets/picSVG/refresh 2.svg" alt="refresh button" class=" refresh-button   linear" >
             </div>
 
             <div  id="kertas-com" class="bg-item-suit  justify-content-evenly" style="padding-top: 15px;padding-bottom: 20px;"
-            onmouseover="hoverSetGrey(this);" onmouseout="hoverSetNull(this);">
+            >
                 <!-- com -->
                 <img src="./assets/kertas.png" class="  paper " >
             </div>
@@ -118,9 +119,9 @@
 
 
 
-
-    <script src="./hoveringElement.js" async></script>
-    <script type= "module" src="./engineJs.js" ></script>
+    <!-- used only when using onmouseover and onmouseout in tag attribute !!! -->
+    <!-- <script src="./hoveringElement.js" async></script> -->
+    
 </body>
 
 </html>

@@ -60,3 +60,5 @@ dan WEB dapat di-load dengan baik, PERLU PAKAI LIVE-SERVER port: 5500
     
     kemudian dimensi tersebut langsung diimplementasi ke Width and Height-nyaS
 
+
+- reference for rotating image: https://codepen.io/StrengthandFreedom/pen/BaaQYqw;

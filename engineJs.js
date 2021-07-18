@@ -17,6 +17,40 @@ let addSpan = document.createElement("span");
 let getSpanBoard = document.getElementById("board-result");
 // console.log(getSpanBoard.childNodes[0]);
 
+/*
+function hoverSetGrey(obj) {
+    document.getElementById(obj.id).classList.add("set-bg-grey");
+}
+function hoverSetNull(obj) {
+    document.getElementById(obj.id).classList.remove("set-bg-grey");
+}
+*/
+
+
+batuP1.addEventListener("mouseover", () => {
+    batuP1.classList.add("set-bg-grey");
+});
+guntingP1.addEventListener("mouseover", () => {
+    guntingP1.classList.add("set-bg-grey");
+});
+kertasP1.addEventListener("mouseover", () => {
+    kertasP1.classList.add("set-bg-grey");
+});
+
+
+
+batuP1.addEventListener("mouseout", () => {
+    batuP1.classList.remove("set-bg-grey");
+});
+guntingP1.addEventListener("mouseout", () => {
+    guntingP1.classList.remove("set-bg-grey");
+});
+kertasP1.addEventListener("mouseout", () => {
+    kertasP1.classList.remove("set-bg-grey");
+});
+
+
+
 
 function replaceSpanElm() {
     if (addSpan.innerText && getSpanBoard.childNodes[0]) {
@@ -24,7 +58,7 @@ function replaceSpanElm() {
         addSpan.innerText = "";
     } else if (addSpan.innerText) {
         addSpan.innerText = "";
-    } else {
+    } else if (getSpanBoard.childNodes[0]) {
         getSpanBoard.removeChild(getSpanBoard.childNodes[0]);
     }
 }
@@ -70,46 +104,63 @@ function draw_Condition() {
 }
 
 
+function poppingPage() {
+    window.open("./popNotif.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=500,width=400,height=200");
+}
+
+
 const getBatu = document.getElementById("batu-com");
-const getGunting = document.getElementById("gunting-com")
-const getKertas = document.getElementById("kertas-com")
+const getGunting = document.getElementById("gunting-com");
+const getKertas = document.getElementById("kertas-com");
+
+
+// state before click, and "true" condition enable the click activity
+let not_click = true;
 
 
 // if click batu picture
 batuP1.addEventListener("click", () => {
-    let inputan = suitan.suit("batu");
 
-    console.log(inputan);
-    if (inputan === "seri") {
-        // DRAW
-        draw_Condition()
 
-        getBatu.classList.remove("set-bg-grey");
-        getBatu.classList.add("set-bg-grey");
-        setTimeout(() => {
+    if (not_click === true) {
+        let inputan = suitan.suit("batu");
+        console.log(inputan);
+        if (inputan === "seri") {
+            // DRAW
+            draw_Condition()
+
             getBatu.classList.remove("set-bg-grey");
-        }, 1000);
-    }
-    else if (inputan === "menang") {
+            getBatu.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getBatu.classList.remove("set-bg-grey");
+            // }, 1000);
+            not_click = false;
+        }
+        else if (inputan === "menang") {
 
-        // P1 WIN
-        p1_Win();
+            // P1 WIN
+            p1_Win();
 
-        getGunting.classList.remove("set-bg-grey");
-        getGunting.classList.add("set-bg-grey");
-        setTimeout(() => {
             getGunting.classList.remove("set-bg-grey");
-        }, 1000);
-    }
-    else if (inputan === "kalah") {
-        // COM WIN
-        com_Win();
-        getKertas.classList.remove("set-bg-grey");
-        getKertas.classList.add("set-bg-grey");
-        setTimeout(() => {
+            getGunting.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getGunting.classList.remove("set-bg-grey");
+            // }, 1000);
+            not_click = false;
+        }
+        else if (inputan === "kalah") {
+            // COM WIN
+            com_Win();
             getKertas.classList.remove("set-bg-grey");
-        }, 1000);
-    }
+            getKertas.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getKertas.classList.remove("set-bg-grey");
+            // }, 1000);
+            not_click = false;
+        }
+    } else {
+        poppingPage();
+    };
 });
 
 
@@ -117,36 +168,47 @@ batuP1.addEventListener("click", () => {
 
 // if click gunting picture
 guntingP1.addEventListener("click", () => {
-    let inputan = suitan.suit("gunting");
-    console.log(inputan);
 
-    if (inputan === "seri") {
-        draw_Condition();
-        getGunting.classList.remove("set-bg-grey");
-        getGunting.classList.add("set-bg-grey");
-        setTimeout(() => {
+    if (not_click === true) {
+
+        let inputan = suitan.suit("gunting");
+        console.log(inputan);
+
+        if (inputan === "seri") {
+            draw_Condition();
             getGunting.classList.remove("set-bg-grey");
-        }, 1000);
-    }
-    else if (inputan === "kalah") {
-        com_Win()
-        getBatu.classList.remove("set-bg-grey");
-        getBatu.classList.add("set-bg-grey");
-        setTimeout(() => {
+            getGunting.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getGunting.classList.remove("set-bg-grey");
+            // }, 1000);
+            not_click = false;
+        }
+        else if (inputan === "kalah") {
+            com_Win()
             getBatu.classList.remove("set-bg-grey");
-        }, 1000);
-    }
+            getBatu.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getBatu.classList.remove("set-bg-grey");
+            // }, 1000);
+            not_click = false;
+        }
 
-    else if (inputan === "menang") {
-        // P1 WIN
-        p1_Win();
+        else if (inputan === "menang") {
+            // P1 WIN
+            p1_Win();
 
-        getKertas.classList.remove("set-bg-grey");
-        getKertas.classList.add("set-bg-grey");
-        setTimeout(() => {
             getKertas.classList.remove("set-bg-grey");
-        }, 1000);
-    }
+            getKertas.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getKertas.classList.remove("set-bg-grey");
+            // }, 1000);
+
+            not_click = false;
+        }
+    } else {
+        poppingPage();
+        
+    };
 });
 
 
@@ -154,37 +216,46 @@ guntingP1.addEventListener("click", () => {
 
 // if click kertas picture
 kertasP1.addEventListener("click", () => {
-    let inputan = suitan.suit("kertas");
-    console.log(inputan);
 
-    if (inputan === "seri") {
-        draw_Condition();
-        getKertas.classList.remove("set-bg-grey");
-        getKertas.classList.add("set-bg-grey");
-        setTimeout(() => {
+
+    if (not_click === true) {
+        let inputan = suitan.suit("kertas");
+        console.log(inputan);
+
+        if (inputan === "seri") {
+            draw_Condition();
             getKertas.classList.remove("set-bg-grey");
-        }, 1000);
-    }
+            getKertas.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getKertas.classList.remove("set-bg-grey");
+            // }, 1000);
+            not_click = false;
+        }
 
-    else if (inputan === "kalah") {
-        com_Win();
-        getGunting.classList.remove("set-bg-grey");
-        getGunting.classList.add("set-bg-grey");
-        setTimeout(() => {
+        else if (inputan === "kalah") {
+            com_Win();
             getGunting.classList.remove("set-bg-grey");
-        }, 1000);
-    }
-    else if (inputan === "menang") {
-        // P1 WIN
-        p1_Win();
+            getGunting.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getGunting.classList.remove("set-bg-grey");
+            // }, 1000);
+            not_click = false;
+        }
+        else if (inputan === "menang") {
+            // P1 WIN
+            p1_Win();
 
-        getBatu.classList.remove("set-bg-grey");
-        getBatu.classList.add("set-bg-grey");
-        setTimeout(() => {
             getBatu.classList.remove("set-bg-grey");
-        }, 1000);
+            getBatu.classList.add("set-bg-grey");
+            // setTimeout(() => {
+            //     getBatu.classList.remove("set-bg-grey");
+            // }, 1000);
+            not_click = false;
+        }
+    } else {
+        poppingPage();
+     
     }
-
 });
 
 
@@ -200,9 +271,24 @@ refreshButton.addEventListener("click", () => {
     setTimeout(() => {
         refreshRotation.classList.remove("rotate");
     }, 1000);
-    
+
 
     const textVs = document.createTextNode("vs");
     addSpan.appendChild(textVs);
     getBoardResult.appendChild(addSpan);
+
+    // change state to enable the click activity, when refresh button click
+    not_click = true;
+
+    setTimeout(() => {
+        getBatu.classList.remove("set-bg-grey");
+    }, 1000);
+    setTimeout(() => {
+        getGunting.classList.remove("set-bg-grey");
+    }, 1000);
+    setTimeout(() => {
+        getKertas.classList.remove("set-bg-grey");
+    }, 1000);
 });
+
+
