@@ -47,5 +47,16 @@ last update: 15 juli:
 
 
 
-agar CLASS dapat berada barengan dan DOCUMENT.GETLEMENTBYID()
-dan WEB dapat di-load dengan baik, PERLU PAKAI LIVE-SERVER
+- agar CLASS dapat berada barengan dgn DOCUMENT.GETLEMENTBYID()
+dan WEB dapat di-load dengan baik, PERLU PAKAI LIVE-SERVER port: 5500
+
+
+>  WIDTH AND HEIGHT in SVG
+- untuk merubah dimensi width and height dari SVG, maka dapat langsung diubah dari 
+    attribute WITDH and HEIGHT di file svg-nya sendiri untuk menyesuaikan
+    -- pendekatan pertama dpt menggunakan PNG untuk penyesuaian awal WIDTH and HEIGHT ---
+
+    <rect width="128" height="120" fill="url(#pattern0)"/>
+    
+    kemudian dimensi tersebut langsung diimplementasi ke Width and Height-nyaS
+

@@ -188,7 +188,7 @@ kertasP1.addEventListener("click", () => {
 });
 
 
-
+const refreshRotation = document.getElementById("rotatingRefreshButton");
 // click refresh button
 refreshButton.addEventListener("click", () => {
 
@@ -196,6 +196,11 @@ refreshButton.addEventListener("click", () => {
 
     getBoardResult.classList.remove("not_draw_result", "draw_result", "text_result");
     getBoardResult.classList.add("vs-frame");
+    refreshRotation.classList.add("rotate");
+    setTimeout(() => {
+        refreshRotation.classList.remove("rotate");
+    }, 1000);
+    
 
     const textVs = document.createTextNode("vs");
     addSpan.appendChild(textVs);

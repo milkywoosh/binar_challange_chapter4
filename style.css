@@ -1,12 +1,17 @@
 .stone {
     
     width: 128px;
-    height: 92px;
+    height: 120px;
 }
 
 .scissor {
     width: 134px;
     height: 140px;
+    /* overflow: visible; */
+
+    /* percobaan 1 */
+    /* width: 100%;
+    height: 50%; */
 }
 
 .paper {
@@ -14,9 +19,10 @@
     height: 150px;
 }
 
+
 .refresh-button {
-    width: 77px;
-    height: 71px;
+    width: 70px;
+    height: 80px;
 }
 
 .border-between {
@@ -157,5 +163,28 @@
     color: #FFFFFF;
     transform: rotate(-30.98deg);
 }
+
+/* rotating refresh button */
+
+.rotate {
+    animation: rotation 1s;
+}
+  
+.linear {
+    animation-timing-function: linear;
+}
+
+.infinite {
+    animation-iteration-count: infinite;
+  }
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 
 
