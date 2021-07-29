@@ -1,5 +1,6 @@
 import { default as Suitclass } from "./oop-suit.js";
 
+alert("page harus dijalankan dengan server, terimakasih");
 
 // const Suit = require("./oop-suit");
 
